@@ -30,8 +30,8 @@ public class TestControleursDesCas {
 		// Cas 2 : Emmenager
 
 //		System.out.println("Cas 2 : Emmenager");
-		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
-		controlEmmenager.ajouterDruide("Panoramix", 10, 5, 7);
+//		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
+//		controlEmmenager.ajouterDruide("Panoramix", 10, 5, 7);
 //		controlEmmenager.ajouterGaulois("Asterix", 6);
 //		controlEmmenager.ajouterGaulois("Obelix", 12);
 //		String[] nomsVillageois = controlAfficherVillage.donnerNomsVillageois();
@@ -50,14 +50,14 @@ public class TestControleursDesCas {
 //		- Obelix
 
 		// Cas 3 : Verifier Identification
-		System.out.println("///////////////////////////////");
-		System.out.println("Cas 3 : Verifier Identification");
-		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(
-				village);
-		boolean vendeur = controlVerifierIdentite.verifierIdentite("Panoramix");
-		System.out.println("Panoramix est un villageois ? " + vendeur);
-		vendeur = controlVerifierIdentite.verifierIdentite("Intrus");
-		System.out.println("Intrus est un villageois ? " + vendeur);
+//		System.out.println("///////////////////////////////");
+//		System.out.println("Cas 3 : Verifier Identification");
+//		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(
+//				village);
+//		boolean vendeur = controlVerifierIdentite.verifierIdentite("Panoramix");
+//		System.out.println("Panoramix est un villageois ? " + vendeur);
+//		vendeur = controlVerifierIdentite.verifierIdentite("Intrus");
+//		System.out.println("Intrus est un villageois ? " + vendeur);
 
 //		Sortie Console :
 		
@@ -148,16 +148,16 @@ public class TestControleursDesCas {
 
 		// Cas 7 : Afficher marche
 
-//		System.out.println("///////////////////////////////");
-//		System.out.println("Cas 7 : Afficher Marche");
-//		ControlAfficherMarche controlAfficherMarche = new ControlAfficherMarche(
-//				village);
-//		controlPrendreEtal.prendreEtal("Obelix", "menhirs", 3);
-//		controlPrendreEtal.prendreEtal("Asterix", "poissons", 10);
-//		String[] marche = controlAfficherMarche.donnerInfosMarche();
-//		for (String etal : marche) {
-//			System.out.println(etal);
-//		}
+		System.out.println("///////////////////////////////");
+		System.out.println("Cas 7 : Afficher Marche");
+		ControlAfficherMarche controlAfficherMarche = new ControlAfficherMarche(
+				village);
+		controlPrendreEtal.prendreEtal("Obelix", "menhirs", 3);
+		controlPrendreEtal.prendreEtal("Asterix", "poissons", 10);
+		String[] marche = controlAfficherMarche.donnerInfosMarche();
+	for (String etal : marche) {
+			System.out.println(etal);
+		}
 		
 
 //		Sortie Console :
