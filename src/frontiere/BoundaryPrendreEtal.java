@@ -15,15 +15,14 @@ public class BoundaryPrendreEtal {
 		if(!nomVendeurConnu){
 			sb.append("Je suis désolée ");
 			sb.append(nomVendeur);
-			sb.append("mais il faut être un habitant de notre village pour commercer ici");
+			sb.append(" mais il faut être un habitant de notre village pour commercer ici");
 			System.out.println(sb.toString());
 		}
 		else {
-			sb.append("Désolée ");
+			sb.append("Bonjour ");
 			sb.append(nomVendeur);
-			sb.append("je vais regarder si je peux vous trouver un étal.");
+			sb.append(", je vais regarder si je peux vous trouver un étal.");
 			System.out.println(sb.toString());
-			
 			boolean etalDisponible = controlPrendreEtal.resteEtals();
 			if(!etalDisponible) {
 				StringBuilder reponseDisponible = new StringBuilder();
@@ -45,11 +44,20 @@ public class BoundaryPrendreEtal {
 		installation.append("\nIl me faudrait quelques renseignements:");
 		
 		StringBuilder questionProduit = new StringBuilder();
+		questionProduit.append("Quel produit souhaitez-vous vendre ?");
 		String produit = Clavier.entrerChaine(questionProduit.toString());
 		
 		StringBuilder questionnbProduit = new StringBuilder();
-		String produit = Clavier.entrerChaine(questionnbProduit.toString());
-		
+		questionnbProduit.append("Combien souhaitez-vous en vendre?");
+		int nbProduit = Clavier.entrerEntier(questionnbProduit.toString());
+		int numeroEtal = controlPrendreEtal.prendreEtal(nomVendeur, produit, nbProduit);
+		if(numeroEtal != -1) {
+			StringBuilder message = new StringBuilder();
+			message.append("Le vendeur ");
+			message.append(nomVendeur);
+			message.append("s'est installé à l'étal n°");
+			message.append(numeroEtal);
+		}
 		
 	}
 }

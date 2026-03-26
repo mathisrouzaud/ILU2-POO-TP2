@@ -26,8 +26,8 @@ public class ControlPrendreEtal {
 		Gaulois gaulois = village.trouverHabitant(nomVendeur);
 		numeroEtal = village.installerVendeur(gaulois, produit, nbProduit);
 		return numeroEtal;
-		}
 	}
+}
 
 	
-}
+
