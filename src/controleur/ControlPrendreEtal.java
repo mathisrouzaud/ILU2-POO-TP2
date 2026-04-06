@@ -25,6 +25,9 @@ public class ControlPrendreEtal {
 		int numeroEtal = -1;
 		Gaulois gaulois = village.trouverHabitant(nomVendeur);
 		numeroEtal = village.installerVendeur(gaulois, produit, nbProduit);
+		if(numeroEtal != -1) {
+			numeroEtal++;
+		}
 		return numeroEtal;
 	}
 }
