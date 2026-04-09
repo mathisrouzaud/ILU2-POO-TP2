@@ -19,7 +19,6 @@ class ControlVerifierIdentiteTest {
 		village = new Village("le vllage des irréductibles", 10, 5);
 		Chef chef = new Chef("Asterix", 5, village);
 		village.setChef(chef);
-		
 	}
 
 	@Test
@@ -31,7 +30,9 @@ class ControlVerifierIdentiteTest {
 	@Test
 	void testVerifierIdentite() {
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
-		assertTrue(controlVerifierIdentite.verifierIdentite("Asterix"));		
+		assertTrue(controlVerifierIdentite.verifierIdentite("Asterix"));
+		assertFalse(controlVerifierIdentite.verifierIdentite("INCONNU"));
+		
 	}
 
 }
